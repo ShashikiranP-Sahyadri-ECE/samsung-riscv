@@ -6,6 +6,7 @@ Allocate memory and use an existing virtual hard disk. Browse to the unzipped VD
 ## Launch the Virtual Machine:
 Once the virtual machine is created, select it and click "Start" to boot up the VDI file with the operating system and software.
 
+![Screenshot from 2025-01-05 21-20-53](https://github.com/user-attachments/assets/c3b17e81-c054-42ea-9c82-c749f8a1842e)
 
 
 
