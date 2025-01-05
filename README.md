@@ -48,12 +48,12 @@ Compile the program using the GCC compiler.
 Execute the compiled binary (./a.out) and enter a value for n to compute and display the sum.
 
 
-The sample program is given by[sum1ton.c](sum1ton.c)
+The sample program is given by [sum1ton.c](https://github.com/ShashikiranP-Sahyadri-ECE/samsung-riscv/blob/main/Task%201/sum1ton.c)
 
 
 ![Screenshot from 2025-01-05 15-08-35](https://github.com/user-attachments/assets/029b12f2-d530-4343-bd28-42a93ce4170b)
 
-This program involves creating a simple C program (sum1ton.c) that computes the sum of numbers from 1 to 100.
+This task involves creating a simple C program (sum1ton.c) that computes the sum of numbers from 1 to 100.
 
 
 
