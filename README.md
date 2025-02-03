@@ -527,3 +527,76 @@ The `LI` instruction loads the immediate value 0 into register `a0`.
 | imm[11:0]   | rs1   | funct3 | rd    | opcode   |
 |-------------|-------|--------|-------|----------|
 | 000000000000 | 00000 | 000    | 01010 | 0010011  |
+<br>
+<br>
+<br>
+
+
+# Task 4
+
+# Functional Simulation of a RISC-V Core
+
+## Overview
+This guide provides step-by-step instructions for performing a functional simulation of a RISC-V core using Verilog. The simulation is conducted using Icarus Verilog (`iverilog`) and GTKWave.
+
+## Prerequisites
+Ensure the following tools are installed on your system:
+- Icarus Verilog (`iverilog`)
+- GTKWave (`gtkwave`)
+
+## Installation
+Run the following commands to install the required tools:
+```sh
+sudo apt install iverilog
+sudo apt install gtkwave
+```
+
+## Download the Code
+Clone the reference GitHub repository containing the Verilog source files:
+```sh
+git clone <repository-url>
+cd <repository-folder>
+```
+
+## Running the Simulation
+To compile and simulate the Verilog code, use the following commands:
+```sh
+iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+./iiitb_rv32i
+```
+
+## Viewing the Simulation Waveform
+To visualize the simulation results using GTKWave:
+```sh
+gtkwave iiitb_rv32i.vcd
+```
+
+## 32-bit Instructions Used
+The following RISC-V instructions have been implemented and analyzed:
+
+
+Instruction | Assembly Format       | 32-bit Machine Code  
+------------|----------------------|---------------------
+ADD         | ADD R6, R1, R2       | 32'h02208300        
+SUB         | SUB R7, R1, R2       | 32'h02209380        
+AND         | AND R8, R1, R3       | 32'h0230a400        
+OR          | OR R9, R2, R5        | 32'h02513480        
+XOR         | XOR R10, R1, R4      | 32'h0240c500        
+SLT         | SLT R11, R2, R4      | 32'h02415580        
+ADDI        | ADDI R12, R4, 5      | 32'h00520600        
+BEQ         | BEQ R0, R0, 15       | 32'h00f00002        
+
+
+## Analyzing the Output Waveform
+After running the simulation, observe the waveform in GTKWave to verify the execution of each instruction and ensure correctness.
+
+![addi](https://github.com/user-attachments/assets/d9b8bdff-67b0-401d-9b7d-a76dd1cbcc6f)
+![wave_sub](https://github.com/user-attachments/assets/1184e338-c370-41f0-a37d-9f8af12b15b8)
+![and_wave](https://github.com/user-attachments/assets/656caead-6db7-4451-9f99-f64515ed357d)
+![beq](https://github.com/user-attachments/assets/074d2c56-5a57-4f52-be15-8b38e7cd6570)
+![or_wave](https://github.com/user-attachments/assets/609d4ff6-e795-4859-9eb1-7c2cc016c3ca)
+![slt](https://github.com/user-attachments/assets/995d5e82-fb3d-4775-b74b-41845ce3f0f0)
+![waveforms](https://github.com/user-attachments/assets/9304b167-a446-4ccb-9f46-8f3c181e18ac)
+![xorwave](https://github.com/user-attachments/assets/63bbcf48-a8ac-4853-a405-1cbd61b3e053)
+![wave_and](https://github.com/user-attachments/assets/fc7fc49d-86e2-4900-97bd-b49645d49ee7)
+
