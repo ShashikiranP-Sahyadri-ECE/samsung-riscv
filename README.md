@@ -600,3 +600,49 @@ After running the simulation, observe the waveform in GTKWave to verify the exec
 ![xorwave](https://github.com/user-attachments/assets/63bbcf48-a8ac-4853-a405-1cbd61b3e053)
 ![wave_and](https://github.com/user-attachments/assets/fc7fc49d-86e2-4900-97bd-b49645d49ee7)
 
+<br>
+<br>
+<br>
+
+# Task 5
+# Automated Irrigation System using VSDsquadron Mini
+
+## 📌 Overview
+This project automates irrigation based on real-time soil moisture levels using a **VSDsquadron Mini (RISC-V)** microcontroller. A **soil moisture sensor** detects the water level in the soil, and a **relay module** controls the water pump to irrigate plants automatically when needed.
+
+## 🛠 Components Required
+| **Component**              | **Quantity** | **Purpose**                         |
+|----------------------------|--------------|-------------------------------------|
+| **VSDsquadron Mini**       | 1            | RISC-V Microcontroller              |
+| **Soil Moisture Sensor**   | 1            | Detects soil moisture levels        |
+| **Relay Module (5V/3.3V)** | 1            | Controls water pump                 |
+| **Water Pump (DC Motor)**  | 1            | Pumps water for irrigation          |
+| **9V Battery + Connector** | 1            | Power source for pump               |
+| **Breadboard & Jumper Wires** | -        | Circuit connections                 |
+
+## 🔌 Circuit Diagram
+![circuit_image](https://github.com/user-attachments/assets/5fe04528-07d4-44b1-a4a6-37aac3b13e78)
+
+
+## 🔗 Circuit Connections
+| **Component** | **Pin on VSDsquadron Mini** | **Function** |
+|--------------|-----------------|------------|
+| **Soil Moisture Sensor** | **PD0 (Digital Input)** | Reads soil moisture (HIGH/LOW) |
+| **Relay Module Signal**  | **PA1 (Digital Output)** | Controls water pump |
+| **Relay Power**          | **3.3V**                 | Provides power to relay module |
+| **Relay Ground**         | **GND**                  | Common ground |
+| **Soil Sensor VCC**      | **3.3V**                 | Power supply for sensor |
+| **Soil Sensor GND**      | **GND**                  | Common ground |
+| **Pump Power**           | **Connected via Relay**  | Activates pump when relay is ON |
+
+## 🚀 Setup & Installation
+1. Connect all components as per the **circuit diagram**.
+2. Flash the firmware/code to **VSDsquadron Mini**.
+3. Power up the system using the **9V battery**.
+4. Test soil moisture levels and ensure that:
+   - The relay activates the **pump when soil is dry**.
+   - The relay **turns off** when soil is sufficiently moist.
+
+⚡ *Built using RISC-V & IoT for Smart Agriculture!* 🌱
+
+
