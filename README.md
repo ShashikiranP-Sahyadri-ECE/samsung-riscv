@@ -604,45 +604,62 @@ After running the simulation, observe the waveform in GTKWave to verify the exec
 <br>
 <br>
 
-# Task 5
-# Automated Irrigation System using VSDsquadron Mini
+# Task 5 
+# 🤖 Talk Like Robots! UART Communication Between VSDSquadron Mini & ESP32
 
-## 📌 Overview
-This project automates irrigation based on real-time soil moisture levels using a **VSDsquadron Mini (RISC-V)** microcontroller. A **soil moisture sensor** detects the water level in the soil, and a **relay module** controls the water pump to irrigate plants automatically when needed.
+## 📌 Project Name
+**Smart UART Communicator: VSDSquadron Mini & ESP32**
 
-## 🛠 Components Required
-| **Component**              | **Quantity** | **Purpose**                         |
-|----------------------------|--------------|-------------------------------------|
-| **VSDsquadron Mini**       | 1            | RISC-V Microcontroller              |
-| **Soil Moisture Sensor**   | 1            | Detects soil moisture levels        |
-| **Relay Module (5V/3.3V)** | 1            | Controls water pump                 |
-| **Water Pump (DC Motor)**  | 1            | Pumps water for irrigation          |
-| **9V Battery + Connector** | 1            | Power source for pump               |
-| **Breadboard & Jumper Wires** | -        | Circuit connections                 |
+## 📖 Overview
+This project demonstrates **UART-based communication** between the **VSDSquadron Mini** and **ESP32**. The VSDSquadron Mini sends a **"Start"** message every 5 seconds, and the ESP32 responds with **"Process Started"**—like two futuristic robots chatting in binary! 📡
 
-## 🔌 Circuit Diagram
-![circuit_image](https://github.com/user-attachments/assets/5fe04528-07d4-44b1-a4a6-37aac3b13e78)
+### 🎯 Goal:
+- Establish smooth UART communication between the boards.
+- Enable real-time monitoring using serial monitors.
+
+---
+
+## 🛠️ Components Required
+
+| 📦 **Item**              | 🧰 **Quantity**          |
+|-------------------------|--------------------------|
+| 🔲 **VSDSquadron Mini**   | 1                      |
+| 🟦 **ESP32 Dev Board**    | 1                      |
+| 🔌 **USB Cables**         | 2 (One for each board) |
+| 🛠️ **Jumper Wires**       | 4                      |
+| 🔲 **Breadboard** (optional) | 1                  |
+
+---
+
+## 📊 Visuals
 
 
-## 🔗 Circuit Connections
-| **Component** | **Pin on VSDsquadron Mini** | **Function** |
-|--------------|-----------------|------------|
-| **Soil Moisture Sensor** | **PD0 (Digital Input)** | Reads soil moisture (HIGH/LOW) |
-| **Relay Module Signal**  | **PA1 (Digital Output)** | Controls water pump |
-| **Relay Power**          | **3.3V**                 | Provides power to relay module |
-| **Relay Ground**         | **GND**                  | Common ground |
-| **Soil Sensor VCC**      | **3.3V**                 | Power supply for sensor |
-| **Soil Sensor GND**      | **GND**                  | Common ground |
-| **Pump Power**           | **Connected via Relay**  | Activates pump when relay is ON |
+### 🔗 Circuit Connection Illustration
 
-## 🚀 Setup & Installation
-1. Connect all components as per the **circuit diagram**.
-2. Flash the firmware/code to **VSDsquadron Mini**.
-3. Power up the system using the **9V battery**.
-4. Test soil moisture levels and ensure that:
-   - The relay activates the **pump when soil is dry**.
-   - The relay **turns off** when soil is sufficiently moist.
+![circuit_image (1)](https://github.com/user-attachments/assets/c76880e1-3bd9-46f8-82ca-bb4c00092d29)
 
-⚡ *Built using RISC-V & IoT for Smart Agriculture!* 🌱
+
+> **Tip:** Use PowerPoint to craft a **clear, professional illustration** of the circuit.
+
+
+## 📌 Circuit Connections
+
+| **VSDSquadron Mini**    | **ESP32**          | **Purpose**                |
+|-------------------------|--------------------|----------------------------|
+| **PD5 (TX)**            | **GPIO16 (RX)**    | Send Data to ESP32         |
+| **PD6 (RX)**            | **GPIO17 (TX)**    | Receive Data from ESP32    |
+| **GND**                 | **GND**            | Common Ground (IMPORTANT)  |
+| **3.3V**                | **3.3V**           | Power Supply               |
+
+---
+
+## 📋 Setup & Installation
+
+### Install PlatformIO & Arduino IDE
+
+1. Install **PlatformIO** in **VS Code** (for VSDSquadron Mini).  
+2. Use the **Arduino IDE** for **ESP32** programming.  
+
+
 
 
